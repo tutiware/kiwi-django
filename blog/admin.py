@@ -1,5 +1,9 @@
 from django.contrib import admin
-from blog.models import article, categoryModel
+from blog.models import articleModel, categoryModel
 
 admin.site.register(categoryModel)
-admin.site.register(articleModel)
+class articlesAdmin(admin.ModelAdmin):
+    list_display = (
+        'title', 'first_published', 'last_edited'
+    )
+admin.site.register(articleModel, articlesAdmin)

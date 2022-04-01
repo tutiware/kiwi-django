@@ -24,3 +24,6 @@ class articleModel(models.Model):
         db_table = 'article'
         verbose_name = 'article'
         verbose_name_plural = 'articles'
+
+    def __str__(self):
+        return self.title
