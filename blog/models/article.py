@@ -17,7 +17,7 @@ class articleModel(models.Model):
         'account.CustomUserModel',  # üyeler tablosuyla eşleştirir
         related_name="articles",  # bu modelin örnekleri de eşleştirmede articles olarak etiketlendi
         on_delete=models.CASCADE,  # bu eşleştirmede bir author silinirse onunla bağlantılı objeler de silinir
-    )
+    )   
     content = RichTextField(default = 'blank')
     first_published = models.DateTimeField(
         auto_now_add=True
