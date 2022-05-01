@@ -8,7 +8,10 @@ class articleModel(models.Model):
     cover = models.ImageField(
         upload_to="article_covers"
     )  # "pipenv install Pillow" needed for ImageField function
-    title = models.CharField(max_length=50)
+    title = models.CharField(
+        max_length=50,
+        blank = False,
+        null = False)
     categories = models.ManyToManyField(  # kategori başlığı altında iki küme arasında çoklu eşleşmeyi sağlar
         categoryModel,  # eşleşeceği küme
         related_name="articles",  # bu modelin örnekleri de eşleştirmede articles olarak etiketlendi

@@ -18,4 +18,4 @@ class categoryModel(models.Model):
         verbose_name_plural = 'categories' #for the case plural examples take place
 
     def __str__(self):
-        return self.title #provides model examples in server to shown as their 'title's
+        return self.title #nesne panel tarafindan bu isimle taninir
